@@ -1,0 +1,57 @@
+<!--https://blog.ipleaders.in/need-know-dog-adoption-rehoming-agreement/-->
+
+<resources>
+    <string name="app_name">Pawdoptions</string>
+    <string name="adopter_details">Adopter Details</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="required">Required</string>
+    <string name="name">Name</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="age">Age</string>
+    <string name="breed">Breed</string>
+    <string name="description">Description</string>
+    <string name="address">Address</string>
+    <string name="enough_space">Do adopter have enough space?</string>
+    <string name="dog_house">Do adopter have indoor dog house?</string>
+    <string name="any_allergic">Is anyone allergic to dog in adopter\'s family?</string>
+    <string name="adequate_food">Do adopter have the adequate food?</string>
+    <string name="adequate_water">Do adopter have the adequate water?</string>
+    <string name="adopt">Adopt</string>
+    <string name="adopting_family">Adopting Family</string>
+    <string name="adopring_family_1">1. I agree that I will care for the said dog safely and humanely as a family dog and companion. The dog will have adequate food, water, shelter, and medical care for the duration of his/her life.</string>
+    <string name="adopting_family_2">2. I understand that Pawdoption makes no guarantees or warranties regarding this dog\'s health, behaviour or temperament. It shall not be held liable for the behaviour of the said dog or any damages it may cause.</string>
+    <string name="terms_clause">Term\'s clause</string>
+    <string name="terms_clause_defination">This clause defines the outline of the relationship between parties. It includes the duties, functions, obligations, etcetera of parties.</string>
+    <string name="terms_clause_1">1. The adopting family shall bear any damages or injuries caused by the actions of the said dog.</string>
+    <string name="terms_clause_2">2. Pawdoption shall not be held liable for this dog\'s behaviour or any damages it may cause.</string>
+    <string name="terms_clause_3">3. The adopting family agrees not to sell, dispose of, or give away the dog for any reason.</string>
+    <string name="terms_clause_4">4. The adopting family hereby agrees to take care of the said dog with utmost care and diligence by providing adequate shelter, food, water and veterinary care.</string>
+    <string name="terms_clause_5">5. If there is an agreement violation, the shelter shall have the right to sue for violations found in the local or state laws. In addition, the rehoming family or the shelter shall have the right to sue for damages from the breach of this agreement.</string>
+    <string name="terms_agreement">I agree Terms and Condition</string>
+    <string name="approve">Approve</string>
+    <string name="reject">Reject</string>
+
+    <string name="login">Login</string>
+    <string name="enter_email">Email</string>
+    <string name="enter_password">Password</string>
+    <string name="rememberMe">Remember Me</string>
+    <string name="forgetPassword">Forget Password</string>
+    <string name="createAccount">Create Account</string>
+    <string name="register">Register</string>
+
+    <string name="shelterName">ShelterName</string>
+    <string name="country">Country</string>
+    <string name="city">Country</string>
+    <string name="zipCode">Zip Code</string>
+    <string name="shelterdescription">shelterDescription</string>
+
+    <string name="firstName">First Name</string>
+    <string name="lastName">Last Name</string>
+    <string name="phoneNumber">Phone Number</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="rePassword">Retype Password</string>
+    <string name="signUp">Sign Up</string>
+
+</resources>

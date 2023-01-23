@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/confirm_adoption_navigation"
+    app:startDestination="@id/loginFragment">
+
+<!--    pendingAdoptionFragment-->
+
+    <fragment
+        android:id="@+id/pendingAdoptionFragment"
+        android:name="com.yadav.pawdoption.view.PendingAdoptionFragment"
+        android:label="fragment_pending_adoptions"
+        tools:layout="@layout/fragment_pending_adoptions" >
+        <action
+            android:id="@+id/action_pendingAdoptionFragment_to_confirmAdoptionFragment"
+            app:destination="@id/confirmAdoptionFragment" />
+    </fragment>
+
+
+    <!--    Confirm Adoption-->
+    <fragment
+        android:id="@+id/confirmAdoptionFragment"
+        android:name="com.yadav.pawdoption.view.ConfirmAdoptionFragment"
+        android:label="fragment_confirm_adoption"
+        tools:layout="@layout/fragment_confirm_adoption" >
+        <action
+            android:id="@+id/action_confirmAdoptionFragment_to_pendingAdoptionFragment"
+            app:destination="@id/pendingAdoptionFragment" />
+        <argument
+            android:name="pendingAdoption"
+            app:argType="com.yadav.pawdoption.model.PendingAdoption" />
+        <argument
+            android:name="shelterPet"
+            app:argType="com.yadav.pawdoption.model.ShelterPet" />
+        <argument
+            android:name="user"
+            app:argType="com.yadav.pawdoption.model.User" />
+        <argument
+            android:name="petImage"
+            app:argType="string" />
+    </fragment>
+
+
+    <!--    Pet Details-->
+    <fragment
+        android:id="@+id/petDetailFragment"
+        android:name="com.yadav.pawdoption.view.PetDetailFragment"
+        android:label="fragment_pet_detail"
+        tools:layout="@layout/fragment_pet_detail" >
+        <action
+            android:id="@+id/action_petDetailFragment_to_adoptPetFragment"
+            app:destination="@id/adoptPetFragment" />
+        <argument
+            android:name="shelterId"
+            app:argType="string" />
+        <argument
+            android:name="petId"
+            app:argType="string" />
+    </fragment>
+
+    <!--    Pet List-->
+    <fragment
+        android:id="@+id/petListFragment"
+        android:name="com.yadav.pawdoption.view.PetListFragment"
+        android:label="PetListFragment" >
+        <action
+            android:id="@+id/action_petListFragment_to_petDetailFragment"
+            app:destination="@id/petDetailFragment" />
+    </fragment>
+
+    <!--    Maps -->
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.yadav.pawdoption.view.MapsFragment"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps" >
+        <action
+            android:id="@+id/action_mapsFragment_to_donateList"
+            app:destination="@id/donateList" />
+    </fragment>
+
+
+    <!--    Donation List -->
+    <fragment
+        android:id="@+id/donateList"
+        android:name="com.yadav.pawdoption.view.DonateList"
+        android:label="fragment_donate_list"
+        tools:layout="@layout/fragment_donate_list" >
+        <action
+            android:id="@+id/action_donateList_to_donateFragment"
+            app:destination="@id/donateFragment" />
+    </fragment>
+
+    <!--    Donate fragment-->
+    <fragment
+        android:id="@+id/donateFragment"
+        android:name="com.yadav.pawdoption.view.DonateFragment"
+        android:label="fragment_donate"
+        tools:layout="@layout/fragment_donate" >
+        <argument
+            android:name="shelter"
+            app:argType="com.yadav.pawdoption.model.Shelter" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.yadav.pawdoption.view.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.yadav.pawdoption.view.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_petListFragment2"
+            app:destination="@id/petListFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_forgetPasswordFragment"
+            app:destination="@id/forgetPasswordFragment" />
+        <action
+            android:id="@+id/action_loginFragment_self"
+            app:destination="@id/loginFragment" />
+    </fragment>
+<!--        android:id="@+id/myAppointment"-->
+<!--        android:name="com.yadav.pawdoption.view.MyAppointment"-->
+<!--        android:label="MyAppointment" />-->
+    <fragment
+        android:id="@+id/createVetAppointment"
+        android:name="com.yadav.pawdoption.view.CreateVetAppointment"
+        android:label="fragment_create_vet_appointment"
+        tools:layout="@layout/fragment_create_vet_appointment" >
+        <action
+            android:id="@+id/action_createVetAppointment_to_bookAppointment"
+            app:destination="@id/bookAppointment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookAppointment"
+        android:name="com.yadav.pawdoption.view.BookAppointment"
+        android:label="BookAppointment" >
+        <action
+            android:id="@+id/action_bookAppointment_to_createVetAppointment"
+            app:destination="@id/createVetAppointment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adoptPetFragment"
+        android:name="com.yadav.pawdoption.view.AdoptPetFragment"
+        android:label="fragment_adopt_pet"
+        tools:layout="@layout/fragment_adopt_pet" >
+        <argument
+            android:name="petId"
+            app:argType="string" />
+        <argument
+            android:name="shelterId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_adoptPetFragment_to_petListFragment"
+            app:destination="@id/petListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgetPasswordFragment"
+        android:name="com.yadav.pawdoption.view.ForgetPasswordFragment"
+        android:label="fragment_forget_password"
+        tools:layout="@layout/fragment_forget_password" >
+        <action
+            android:id="@+id/action_forgetPasswordFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userProfileFragment"
+        android:name="com.yadav.pawdoption.view.UserProfileFragment"
+        android:label="fragment_user_profile"
+        tools:layout="@layout/fragment_user_profile" />
+    <fragment
+        android:id="@+id/myAppointment"
+        android:name="com.yadav.pawdoption.view.MyAppointment"
+        android:label="MyAppointment" />
+    <fragment
+        android:id="@+id/userDonations"
+        android:name="com.yadav.pawdoption.view.UserDonations"
+        android:label="fragment_user_donations"
+        tools:layout="@layout/fragment_user_donations" />
+    <fragment
+        android:id="@+id/shelterAllDonations"
+        android:name="com.yadav.pawdoption.view.ShelterAllDonations"
+        android:label="fragment_shelter_all_donations"
+        tools:layout="@layout/fragment_shelter_all_donations" />
+</navigation>

@@ -1,0 +1,71 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/donate_shelter_card"
+    android:layout_margin="5dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="8dp"
+    app:cardMaxElevation="10dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true"
+    android:clickable="true"
+    android:focusable="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout"
+        android:padding="16dp"
+        >
+
+        <TextView
+            android:id="@+id/tvShelterName"
+            android:layout_width="236dp"
+            android:layout_height="40dp"
+            android:text="TextView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginStart="5dp"
+            android:textSize="20sp"
+            android:textColor="#212529"/>
+
+        <TextView
+            android:id="@+id/tvShelterAddress"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="TextView"
+            app:layout_constraintTop_toBottomOf="@+id/tvShelterName"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_margin="5dp"
+            android:layout_marginStart="5dp"
+            android:textSize="15sp"
+            android:textColor="#343a40"/>
+
+        <TextView
+            android:id="@+id/tvShelterDescription"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="TextView"
+            app:layout_constraintTop_toBottomOf="@+id/tvShelterAddress"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_margin="5dp"
+            android:layout_marginStart="5dp"
+            android:textSize="12sp"
+            android:textColor="#6c757d"/>
+
+        <Button
+            android:id="@+id/donate_button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:layout_constraintTop_toBottomOf="@id/tvShelterDescription"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="DONATE"
+            android:backgroundTint="#80b918"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.cardview.widget.CardView>

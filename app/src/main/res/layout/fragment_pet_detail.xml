@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--https://stackoverflow.com/questions/29991780/how-could-i-develop-an-image-carousel-on-android-->
+<!--    https://www.geeksforgeeks.org/android-image-slider-using-viewpager-in-kotlin/-->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.PetDetailFragment">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="8dp"
+    tools:context=".view.PetDetailFragment">
+
+
+    <RelativeLayout
+        android:id="@+id/rlPetDetailsImage"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vpPetDetailsImage"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_alignParentTop="true"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <me.relex.circleindicator.CircleIndicator
+            android:id="@+id/inPetDetailsImage"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignBottom="@id/vpPetDetailsImage" />
+
+    </RelativeLayout>
+
+
+<!--    <ScrollView-->
+<!--        android:id="@+id/svPetDetailsDetailsAndMap"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="350dp"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        >-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/llAdoptShareLike"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rlPetDetailsImage">
+
+            <TextView
+                android:id="@+id/tvPetDetailsPetName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pet Name"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"/>
+
+            <TextView
+                android:id="@+id/tvPetDetailsPetBreed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pet Name"/>
+
+            <TextView
+                android:id="@+id/tvPetDetailsPetAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pet Name"/>
+
+            <TextView
+                android:id="@+id/tvPetDetailsPetDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pet Description" />
+
+            <TextView
+                android:id="@+id/tvPetDetailsShelterName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Shelter Name"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"/>
+
+            <TextView
+                android:id="@+id/tvPetDetailsShelterAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mobile Number"/>
+
+            <TextView
+                android:id="@+id/tvPetDetailsShelterDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:text="Address" />
+
+            <fragment
+                android:id="@+id/mapPetDetailsShelterLocation"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="220dp" />
+
+        </LinearLayout>
+<!--    </ScrollView>-->
+
+    <LinearLayout
+        android:id="@+id/llAdoptShareLike"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintStart_toStartOf="parent">
+        <Button
+            android:id="@+id/btnPetDetailsAdopt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:gravity="center"
+            android:paddingLeft="8dp"
+            android:paddingTop="8dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="3dp"
+
+            android:text="@string/adopt" />
+
+
+        <ImageView
+            android:id="@+id/ivPetDetailsSharePet"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:contextClickable="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_round_share_24"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageView
+            android:id="@+id/ivPetDetailsLikePet"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_round_love_black_24"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

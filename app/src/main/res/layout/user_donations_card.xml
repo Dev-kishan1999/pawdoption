@@ -1,0 +1,65 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/user_donations_card"
+    android:layout_margin="5dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="8dp"
+    app:cardMaxElevation="10dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true"
+    android:clickable="true"
+    android:focusable="true"
+    android:backgroundTint="#fce4ec">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/clUserDonationsCard"
+        android:padding="16dp"
+        >
+
+        <TextView
+            android:id="@+id/tvDonatedAmount"
+            android:layout_width="236dp"
+            android:layout_height="40dp"
+            android:text="TextView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginStart="5dp"
+            android:textSize="20sp"
+            android:textColor="#212529"/>
+
+
+
+        <TextView
+            android:id="@+id/tvDonatedToShelter"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="TextView"
+            app:layout_constraintTop_toBottomOf="@+id/tvDonatedAmount"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_margin="5dp"
+            android:layout_marginStart="5dp"
+            android:textSize="12sp"
+            android:textColor="#6c757d"/>
+
+        <TextView
+            android:id="@+id/tvDonationTimeStamp"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="TextView"
+            app:layout_constraintTop_toBottomOf="@+id/tvDonatedToShelter"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_margin="5dp"
+            android:layout_marginStart="5dp"
+            android:textSize="15sp"
+            android:textColor="#343a40"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.cardview.widget.CardView>
